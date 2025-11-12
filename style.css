@@ -1,0 +1,53 @@
+/* style.css – visual simples, mas agradável */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+    background: #f9f9f9;
+    color: #333;
+}
+h1 {
+    color: #2c3e50;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #f0f0f0;
+}
+a.btn, button.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 2px;
+    text-decoration: none;
+    color: #fff;
+    background: #3498db;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+a.btn:hover, button.btn:hover {
+    background: #2980b9;
+}
+a.btn.btn-danger, button.btn.btn-danger {
+    background: #e74c3c;
+}
+a.btn.btn-danger:hover, button.btn.btn-danger:hover {
+    background: #c0392b;
+}
+a.btn.btn-secondary, button.btn.btn-secondary {
+    background: #7f8c8d;
+}
+a.btn.btn-secondary:hover, button.btn.btn-secondary:hover {
+    background: #606b6d;
+}
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+}
