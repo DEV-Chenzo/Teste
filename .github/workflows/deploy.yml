@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🧾 Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: 🚀 Deploy para FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          
           protocol: ftps
           port: 21
           local-dir: ./
