@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=index.php">
-    <title>Redirecionando...</title>
+    <title>Carregando...</title>
+    <style>
+        /* Fundo e centralização */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        /* Círculo animado */
+        .loader {
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top: 6px solid #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Texto */
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        /* Animação do círculo */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
     <script>
-        // Caso o redirecionamento meta falhe
-        window.location.href = "index.php";
+        // Redireciona automaticamente após 3 segundos
+        setTimeout(() => {
+            window.location.href = "index.php";
+        }, 3000);
     </script>
 </head>
 <body>
-    <p>Redirecionando para <a href="index.php">index.php</a>...</p>
+    <div class="loader"></div>
+    <p>Carregando, aguarde...</p>
 </body>
 </html>
