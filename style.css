@@ -1,53 +1,35 @@
-/* style.css – visual simples, mas agradável */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 30px;
-    background: #f9f9f9;
-    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f5f5f5;
 }
 h1 {
-    color: #2c3e50;
+    color: #333;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
+    background: white;
 }
 th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
+    padding: 8px;
     text-align: left;
 }
-th {
-    background: #f0f0f0;
-}
-a.btn, button.btn {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 2px;
+a {
     text-decoration: none;
-    color: #fff;
-    background: #3498db;
-    border-radius: 4px;
+    color: #007BFF;
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    background-color: #28a745;
+    color: white;
     border: none;
+    padding: 8px 12px;
     cursor: pointer;
 }
-a.btn:hover, button.btn:hover {
-    background: #2980b9;
-}
-a.btn.btn-danger, button.btn.btn-danger {
-    background: #e74c3c;
-}
-a.btn.btn-danger:hover, button.btn.btn-danger:hover {
-    background: #c0392b;
-}
-a.btn.btn-secondary, button.btn.btn-secondary {
-    background: #7f8c8d;
-}
-a.btn.btn-secondary:hover, button.btn.btn-secondary:hover {
-    background: #606b6d;
-}
-.error {
-    color: #e74c3c;
-    font-weight: bold;
+button:hover {
+    background-color: #218838;
 }
