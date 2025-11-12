@@ -1,6 +1,6 @@
 <?php
 $host = 'sql208.infinityfree.com';
-$dbname = 'crud_project';
+$dbname = 'if0_40402164_crud_project';
 $username = 'if0_40402164';
 $password = 'hnoVA64NVi7f';
 
