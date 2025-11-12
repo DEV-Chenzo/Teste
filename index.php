@@ -1,14 +1,18 @@
-<?php include 'db.php'; ?>
+<?php
+include 'db.php';
+$stmt = $pdo->query("SELECT * FROM users ORDER BY id DESC");
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>CRUD Simples em PHP</title>
+    <title>CRUD Simples com PDO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Lista de Usuários</h1>
-    <a href="create.php">➕ Adicionar Usuário</a>
+    <a href="create.php" class="botao">➕ Novo Usuário</a>
     <table>
         <tr>
             <th>ID</th>
@@ -16,20 +20,17 @@
             <th>Email</th>
             <th>Ações</th>
         </tr>
-        <?php
-        $result = $conn->query("SELECT * FROM users");
-        while ($row = $result->fetch_assoc()):
-        ?>
+        <?php foreach ($users as $user): ?>
         <tr>
-            <td><?= $row['id'] ?></td>
-            <td><?= $row['nome'] ?></td>
-            <td><?= $row['email'] ?></td>
+            <td><?= htmlspecialchars($user['id']) ?></td>
+            <td><?= htmlspecialchars($user['nome']) ?></td>
+            <td><?= htmlspecialchars($user['email']) ?></td>
             <td>
-                <a href="update.php?id=<?= $row['id'] ?>">✏️ Editar</a> |
-                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Deseja realmente excluir?')">🗑️ Excluir</a>
+                <a href="update.php?id=<?= $user['id'] ?>">✏️ Editar</a> |
+                <a href="delete.php?id=<?= $user['id'] ?>" onclick="return confirm('Deseja realmente excluir?')">🗑️ Excluir</a>
             </td>
         </tr>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
     </table>
 </body>
 </html>
